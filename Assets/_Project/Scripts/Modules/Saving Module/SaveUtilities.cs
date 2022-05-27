@@ -3,6 +3,8 @@ using UnityEngine;
 
 namespace _Project.Modules.Saving
 {
+    // SaveUtilies is responsible to convert Any Serializable Class Type into a JSON and store it as well as retrive it for persistant data applications
+
     public static class SaveUtilities<SaveObject>
     {
         private static string classDataIdentifier = typeof(SaveObject).Name;

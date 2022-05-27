@@ -1,0 +1,44 @@
+Saving Module Documentation
+
+Master Data - Static Class 
+
+- Holds the persistant data/saved data for the game project. 
+- Comes with 4 data members (Economy, PlayerProgression, Settings, Purchasing)
+- Easy to extend and read
+
+
+To Add Custom Persistant Data:
+1. Create a serializable class 
+2. Add public or serialized fields of your desired persistant data.
+3. Create a static member of this class in the MasterData class
+4. To Load the custom data call 
+		SavingUtilities<CustomClassName>.LoadDataClass()
+5. To Save the custom data call
+		SavingUtilities<CustomClassName>.SaveDataClass(member data of the class)
+6. Add these to the pre-built LoadSavedGameData() and SaveGameData() functions
+
+
+EXAMPLE:Assuming Economy is a serializable class
+
+[System.Serializable]
+public class Economy
+{
+    public int exampleData = 10;
+}
+
+public static class MasterData
+{
+	private static Economy GameEconomy;
+
+	private static void LoadSavedGameData()
+	{
+		var SavedGameEconomy = SaveUtilities<Economy>.LoadDataClass();
+		GameEconomy = SavedGameEconomy == null ? new Economy() : SavedGameEconomy;
+	}
+
+	public static void SaveGameData()
+	{
+		SaveUtilities<Economy>.SaveDataClass(GameEconomy);
+	}
+}
+

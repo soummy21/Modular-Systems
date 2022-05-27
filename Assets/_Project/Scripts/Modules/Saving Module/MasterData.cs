@@ -2,6 +2,8 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using _Project.Modules.Saving;
 
+// Master Data is the global persistant data file for the game/project. 
+
 public static class MasterData
 {
     //---------------------------DataFiles -------------------------------
@@ -13,7 +15,7 @@ public static class MasterData
     //Settings
     public static Settings GameSettings;
     //Purchasing
-
+    public static Purchasing Purchasing;
     //--------------------------------------------------------------------
 
     [RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.BeforeSceneLoad)]
@@ -27,6 +29,9 @@ public static class MasterData
 
         var SavedGameSettings = SaveUtilities<Settings>.LoadDataClass();
         GameSettings = SavedGameSettings == null ? new Settings() : SavedGameSettings;
+
+        var SavedPurchasing = SaveUtilities<Purchasing>.LoadDataClass();
+        Purchasing = SavedPurchasing == null ? new Purchasing() : SavedPurchasing;
 
     }
 
@@ -91,10 +96,11 @@ public class PlayerProgress
 [System.Serializable]
 public class Settings
 {
+    public Settings() { }
+
     public bool Vibrations = false;
     public bool Audio = false;
 
-    public Settings() { }
 }
 
 [System.Serializable]
