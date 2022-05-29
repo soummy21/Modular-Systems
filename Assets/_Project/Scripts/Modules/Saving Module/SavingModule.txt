@@ -18,7 +18,7 @@ To Add Custom Persistant Data:
 6. Add these to the pre-built LoadSavedGameData() and SaveGameData() functions
 
 
-EXAMPLE:Assuming Economy is a serializable class
+EXAMPLE:Economy NEEDS to be a serializable class
 
 [System.Serializable]
 public class Economy
