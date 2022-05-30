@@ -1,8 +1,14 @@
-﻿
+﻿using SoummySDK.Messaging;
 
-public class LoadLevelState : GameState<int, int>
+namespace SoummySDK.GameStateMachine.Backend
 {
-    public LoadLevelState(Message<int, int> GameMessage) : base(GameMessage)
+    public class LoadLevelState : BaseGameState<int, int>
     {
+        public LoadLevelState(Message<int, int> GameMessage) : base(GameMessage)
+        {
+        }
     }
 }
+
+
+

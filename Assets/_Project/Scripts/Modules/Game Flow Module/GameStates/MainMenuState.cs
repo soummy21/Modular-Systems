@@ -1,9 +1,14 @@
-﻿
+﻿using SoummySDK.Messaging;
 
-public class MainMenuState : GameState
+namespace SoummySDK.GameStateMachine.Backend
 {
-    public MainMenuState(Message GameMessage) : base(GameMessage)
+    public class MainMenuState : BaseGameState
     {
+        public MainMenuState(Message GameMessage) : base(GameMessage)
+        {
+        }
     }
 }
+
+
 

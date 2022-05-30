@@ -1,8 +1,13 @@
-﻿
+﻿using SoummySDK.Messaging;
 
-public class GamePausedState : GameState
+namespace SoummySDK.GameStateMachine.Backend
 {
-    public GamePausedState(Message message) : base(message) { }
+    public class GamePausedState : BaseGameState
+    {
+        public GamePausedState(Message message) : base(message) { }
+    }
 }
+
+
 
 

@@ -1,7 +1,6 @@
-using System.Collections.Generic;
 using UnityEngine;
 
-namespace _Project.Modules.Saving
+namespace SoummySDK.Saving
 {
     // SaveUtilies is responsible to convert Any Serializable Class Type into a JSON and store it as well as retrive it for persistant data applications
 

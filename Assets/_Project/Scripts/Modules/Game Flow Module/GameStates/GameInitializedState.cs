@@ -1,8 +1,13 @@
-﻿
+﻿using SoummySDK.Messaging;
 
-public class GameInitializedState : GameState
+namespace SoummySDK.GameStateMachine.Backend
 {
-    public GameInitializedState(Message message) : base(message) { }
+    public class GameInitializedState : BaseGameState
+    {
+        public GameInitializedState(Message message) : base(message) { }
+    }
 }
+
+
 
 

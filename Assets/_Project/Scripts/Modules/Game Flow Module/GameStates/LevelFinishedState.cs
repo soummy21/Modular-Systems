@@ -1,18 +1,23 @@
-﻿
+﻿using SoummySDK.Messaging;
 
-public class LevelFinishedState : GameState<Result>
+namespace SoummySDK.GameStateMachine.Backend
 {
-    public LevelFinishedState(Message<Result> GameMessage) : base(GameMessage)
+    public class LevelFinishedState : BaseGameState<Result>
     {
-    }
+        public LevelFinishedState(Message<Result> GameMessage) : base(GameMessage)
+        {
+        }
 
-    public override void HandleGameState(Result messageData)
-    {
-        base.HandleGameState(messageData);
+        public override void HandleGameState(Result messageData)
+        {
+            base.HandleGameState(messageData);
 
-        if(messageData == Result.DEFEAT) { }
+            if (messageData == Result.DEFEAT) { }
 
-        if(messageData == Result.VICTORY) { }
+            if (messageData == Result.VICTORY) { }
 
+        }
     }
 }
+
+

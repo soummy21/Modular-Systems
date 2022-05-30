@@ -1,8 +1,12 @@
-﻿
-
-public class LevelStartedState : GameState
+﻿using SoummySDK.Messaging;
+namespace SoummySDK.GameStateMachine.Backend
 {
-    public LevelStartedState(Message GameMessage) : base(GameMessage)
+    public class LevelStartedState : BaseGameState
     {
+        public LevelStartedState(Message GameMessage) : base(GameMessage)
+        {
+        }
     }
 }
+
+

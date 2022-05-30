@@ -1,4 +1,6 @@
 //-------To hold game messages for the project------//
+using SoummySDK.Messaging;
+
 public class GameMessages
 {
     //Default GameMessages
@@ -11,5 +13,7 @@ public class GameMessages
     public static readonly Message LevelStartedMessage = new Message();
     public static readonly Message<Result> LevelFinishedMessage = new Message<Result>();  //Takes Level Result
 }
+
+
 
 
