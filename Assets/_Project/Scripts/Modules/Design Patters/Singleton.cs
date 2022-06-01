@@ -16,9 +16,11 @@ namespace SoummySDK.DesignPatterns
         {
             if (instance == null)
                 instance = this as T;
+            else
+                Destroy(this as T);
 
             if(dontDestroyOnLoad)
-                DontDestroyOnLoad(this.gameObject);
+                DontDestroyOnLoad(gameObject);
         }
 
         public virtual void OnDestroy()

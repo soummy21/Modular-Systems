@@ -14,6 +14,9 @@ public class GameMessages
     public static readonly Message<Result> LevelFinishedMessage = new Message<Result>();  //Takes Level Result
 }
 
-
+public class ManagerMessages
+{
+    public static readonly Message<int> OnEconomyUpdate = new Message<int>();
+}
 
 
